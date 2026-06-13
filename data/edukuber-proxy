@@ -1,0 +1,125 @@
+# geosite:edukuber-proxy — domains routed THROUGH the VPN (blacklist mode).
+# Match type: domain: = the domain and ALL its subdomains.
+# Expand freely; deeplink does not change when this list changes.
+
+####################  MESSENGERS  ####################
+# Telegram (also needs CIDRs in edukuber-proxy-ip.txt — MTProto goes by IP)
+domain:telegram.org
+domain:t.me
+domain:telegram.me
+domain:telesco.pe
+domain:telegra.ph
+domain:tdesktop.com
+domain:comments.app
+# WhatsApp
+domain:whatsapp.com
+domain:whatsapp.net
+domain:wa.me
+# Signal
+domain:signal.org
+domain:signal.art
+domain:whispersystems.org
+# Discord (voice is UDP-by-IP; if calls fail, add Discord ASN ranges to geoip)
+domain:discord.com
+domain:discordapp.com
+domain:discord.gg
+domain:discordapp.net
+domain:discord.media
+domain:discordcdn.com
+# Viber
+domain:viber.com
+# Other messengers
+domain:threema.ch
+domain:element.io
+domain:matrix.org
+domain:line.me
+
+####################  SOCIAL NETWORKS  ####################
+# Meta — Instagram / Facebook / Threads / Messenger
+domain:instagram.com
+domain:cdninstagram.com
+domain:ig.me
+domain:facebook.com
+domain:fb.com
+domain:fb.me
+domain:fbcdn.net
+domain:facebook.net
+domain:threads.net
+domain:messenger.com
+# X / Twitter
+domain:twitter.com
+domain:x.com
+domain:twimg.com
+domain:t.co
+# LinkedIn
+domain:linkedin.com
+domain:licdn.com
+# TikTok
+domain:tiktok.com
+domain:tiktokcdn.com
+domain:tiktokv.com
+domain:byteoversea.com
+domain:ibytedtos.com
+# Others
+domain:snapchat.com
+domain:sc-cdn.net
+domain:pinterest.com
+domain:pinimg.com
+domain:reddit.com
+domain:redd.it
+domain:redditstatic.com
+domain:redditmedia.com
+domain:tumblr.com
+domain:bsky.app
+domain:bsky.social
+
+####################  AI SITES  ####################
+# OpenAI
+domain:openai.com
+domain:chatgpt.com
+domain:oaistatic.com
+domain:oaiusercontent.com
+# Anthropic
+domain:anthropic.com
+domain:claude.ai
+# Google AI (specific subdomains only — do NOT proxy all of google)
+domain:gemini.google.com
+domain:bard.google.com
+domain:aistudio.google.com
+domain:ai.google.dev
+domain:deepmind.com
+domain:deepmind.google
+# Microsoft Copilot
+domain:copilot.microsoft.com
+# Other AI
+domain:perplexity.ai
+domain:x.ai
+domain:grok.com
+domain:midjourney.com
+domain:mistral.ai
+domain:huggingface.co
+domain:hf.co
+domain:poe.com
+domain:character.ai
+domain:characterai.io
+domain:suno.com
+domain:suno.ai
+domain:elevenlabs.io
+domain:runwayml.com
+domain:stability.ai
+domain:replicate.com
+domain:cohere.com
+domain:cohere.ai
+domain:leonardo.ai
+domain:pika.art
+domain:together.ai
+domain:deepseek.com
+
+####################  VIDEO (blocked / throttled in RU)  ####################
+# YouTube (Google — specific domains only)
+domain:youtube.com
+domain:youtu.be
+domain:googlevideo.com
+domain:ytimg.com
+domain:ggpht.com
+domain:yt.be

@@ -1,0 +1,10 @@
+{
+  "input": [
+    { "type": "text",    "action": "add", "args": { "name": "edukuber-proxy", "uri": "./edukuber-proxy-ip.txt" } },
+    { "type": "private", "action": "add", "args": { "name": "private" } }
+  ],
+  "output": [
+    { "type": "v2rayGeoIPDat", "action": "output",
+      "args": { "outputName": "geoip.dat", "wantedList": ["edukuber-proxy", "private"] } }
+  ]
+}

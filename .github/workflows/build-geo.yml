@@ -1,0 +1,42 @@
+name: build-geo
+on:
+  schedule: [{ cron: "0 3 * * *" }]   # daily 03:00 UTC
+  workflow_dispatch:
+  push:
+    paths: ["data/**", "edukuber-proxy-ip.txt", "config.json"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with: { go-version: "1.22" }
+
+      # geosite.dat : upstream categories (category-ru, category-ads-all, private) + edukuber-proxy
+      - name: build geosite
+        run: |
+          git clone --depth=1 https://github.com/v2fly/domain-list-community.git dlc
+          cp -r data/* dlc/data/
+          (cd dlc && go run ./)
+          mv dlc/dlc.dat geosite.dat
+
+      # geoip.dat : edukuber-proxy + private
+      - name: build geoip
+        run: |
+          git clone --depth=1 https://github.com/v2fly/geoip.git gi
+          cp config.json edukuber-proxy-ip.txt gi/
+          (cd gi && go run ./ -c config.json)
+          mv gi/output/dat/geoip.dat geoip.dat
+
+      - name: publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: geo-latest
+          name: geo-latest
+          files: |
+            geosite.dat
+            geoip.dat

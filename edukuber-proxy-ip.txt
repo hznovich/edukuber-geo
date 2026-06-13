@@ -1,0 +1,36 @@
+# geoip:edukuber-proxy — IP/CIDR routed THROUGH the VPN.
+# Mostly for services that connect by IP and bypass domain rules.
+
+####################  TELEGRAM  ####################
+# Telegram MTProto goes to data centers by IP — domain rules alone miss it.
+# Source: AS62041 (Telegram Messenger Inc). Refresh occasionally.
+91.105.192.0/23
+91.108.4.0/22
+91.108.8.0/22
+91.108.12.0/22
+91.108.16.0/22
+91.108.20.0/22
+91.108.56.0/22
+95.161.64.0/20
+149.154.160.0/20
+185.76.151.0/24
+2001:67c:4e8::/48
+2001:b28:f23c::/48
+2001:b28:f23d::/48
+2001:b28:f23f::/48
+2a0a:f280:203::/48
+
+####################  DISCORD VOICE  ####################
+# Discord voice media is UDP-by-IP and bypasses domain rules.
+# Discord-owned (i3D.net) blocks only — NOT the broad GCP/Cloudflare ranges
+# some lists include (those would pull unrelated traffic into the tunnel).
+# Verify/refresh periodically; voice ranges drift.
+66.22.192.0/18
+138.128.136.0/21
+195.62.89.0/24
+5.200.14.128/25
+12.129.184.160/29
+64.71.8.96/29
+
+####################  (optional) more IP-dependent services  ####################
+# Add others here as you find them via router traffic analysis.
