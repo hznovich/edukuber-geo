@@ -4,17 +4,39 @@
 
 ####################  MESSENGERS  ####################
 # Telegram (also needs CIDRs in edukuber-proxy-ip.txt — MTProto goes by IP)
-domain:telegram.org
-domain:t.me
-domain:telegram.me
-domain:telesco.pe
-domain:telegra.ph
-domain:tdesktop.com
+domain:cdn-telegram.org
 domain:comments.app
+domain:contest.com
+domain:fragment.com
+domain:graph.org
+domain:quiz.directory
+domain:t.me
+domain:tdesktop.com
+domain:telega.one
+domain:telegra.ph
+domain:telegram-cdn.org
+domain:telegram.dog
+domain:telegram.me
+domain:telegram.org
+domain:telegram.space
+domain:telesco.pe
+domain:tg.dev
+domain:ton.org
+domain:toncenter.com
+domain:tx.me
+domain:usercontent.dev
 # WhatsApp
-domain:whatsapp.com
-domain:whatsapp.net
 domain:wa.me
+domain:whatsapp-plus.info
+domain:whatsapp-plus.me
+domain:whatsapp-plus.net
+domain:whatsapp.cc
+domain:whatsapp.com
+domain:whatsapp.info
+domain:whatsapp.net
+domain:whatsapp.org
+domain:whatsapp.tv
+domain:whatsappbrand.com
 # Signal
 domain:signal.org
 domain:signal.art
